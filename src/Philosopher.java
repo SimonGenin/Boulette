@@ -50,6 +50,7 @@ public class Philosopher implements Runnable {
             // On check si elle est chaude
             if (mb.isHot()) {
                 // Bah on fait rien, on la mange !
+                plate.remove(mb);
                 Meatball.total--;
                 continue;
             }
