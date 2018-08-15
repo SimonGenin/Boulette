@@ -4,6 +4,31 @@ public class Main {
 
     public static void main(String[] args) throws InterruptedException {
 
+        final int NUMBER = 999;
+
+        Pan[] pans = new Pan[999];
+
+        for (int i = 0; i < 999; i++) {
+
+            pans[i] = new Pan(/* mettre des boulettes */);
+
+        }
+
+        Philosopher[] philos = new Philosopher[999];
+
+
+        for (int i = 0; i < 999; i++) {
+
+            if (i != 998) {
+                philos[i] = new Philosopher(new ArrayList<>(), pans[i], pans[i + 1]);
+            }
+            else {
+                philos[i] = new Philosopher(new ArrayList<>(), pans[998], pans[0]);
+            }
+
+        }
+
+
         ArrayList content1 = new ArrayList();
         content1.add(new Meatball());
         content1.add(new Meatball());
